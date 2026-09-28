@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Class Management</p>
+          <h1>Attendance Tracker</h1>
+        </div>
+        <button id="resetBtn" class="button button-danger">Reset All</button>
+      </header>
+
+      <section class="summary-grid">
+        <div class="stat-card">
+          <span>Total</span>
+          <strong id="totalCount">0</strong>
+        </div>
+        <div class="stat-card present">
+          <span>Present</span>
+          <strong id="presentCount">0</strong>
+        </div>
+        <div class="stat-card absent">
+          <span>Absent</span>
+          <strong id="absentCount">0</strong>
+        </div>
+        <div class="stat-card late">
+          <span>Late</span>
+          <strong id="lateCount">0</strong>
+        </div>
+      </section>
+
+      <section class="panel add-panel">
+        <h2>Add Student</h2>
+        <div class="form-row">
+          <input id="studentName" type="text" placeholder="Enter student name" maxlength="40" />
+          <button id="addStudentBtn" class="button button-primary">Add</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="table-header">
+          <h2>Today’s Attendance</h2>
+          <span id="todayDate"></span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="attendanceTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
